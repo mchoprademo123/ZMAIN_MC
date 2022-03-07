@@ -1,0 +1,26 @@
+managed implementation in class zbp_travel__i_i056086 unique;
+//strict; //Comment this line in to enable strict mode. The strict mode is prerequisite to be future proof regarding syntax and to be able to release your BO.
+
+define behavior for ZTRAVEL__I_I056086 //alias <alias_name>
+persistent table ZTRAVEL_I056086
+lock master
+etag master last_changed_at
+//etag master <field_name>
+{
+
+// semantic key is calculated in a determination
+  field ( readonly ) travel_id;
+
+  // administrative fields (read only)
+  field ( readonly ) last_changed_at, last_changed_by, created_at, created_by;
+
+  // mandatory fields that are required to create a travel
+  field ( mandatory ) agency_id, overall_status, booking_fee, currency_code;
+
+  // mandatory fields that are required to create a travel
+  field ( mandatory ) Begin_Date, End_Date, Customer_ID;
+
+  create;
+  update;
+  delete;
+}
