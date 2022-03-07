@@ -1,0 +1,5 @@
+@EndUserText.label: 'ZPRODUCT'
+@OData.schema.name: 'API_PRODUCT_SRV'
+define service ZPRODUCT {
+ expose ZA_PRODUCT; 
+ } 
